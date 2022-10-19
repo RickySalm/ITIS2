@@ -4,6 +4,9 @@
 
 {% block content %}
 <h1>Edit</h1>
+
+<h2 id="home_page"><a href="{{ url_for('products') }}">Home page</a></h2>
+
 <form method="post">
     <label>Name</label>
     <input type="text" name="name" placeholder="product name" value="{{ product[2] }}">
@@ -11,6 +14,6 @@
     <input type="text" name="description" placeholder="product description" value="{{ product[3] }}">
     <label>Price</label>
     <input type="number" name="price" placeholder="product price" value="{{ product[4] }}">
-    <button type="submit">Edit</button>
+    <button type="submit" id="button_edit">Edit</button>
 </form>
 {% endblock %}
