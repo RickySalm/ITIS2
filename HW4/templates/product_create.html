@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block title %}Adding a product{% endblock %}
+
+{% block content %}
+<h1>Adding a product</h1>
+
+<form method="post">
+    <label>Name</label>
+    <input type="text" name="name" placeholder="product name" value="{{ request.form['name'] }}">
+    <label>Description</label>
+    <input type="text" name="description" placeholder="product description" value="{{ request.form['description'] }}">
+    <label>Price</label>
+    <input type="number" name="price" placeholder="product price" value="{{ request.form['price'] }}">
+    <button type="submit">Add</button>
+</form>
+{% endblock %}
